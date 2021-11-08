@@ -96,7 +96,7 @@ To approach this, we assume that the the time of creation of the table all devic
 
              getarp.gettable(getarp.map)
 
-             os.system(&quot;ping &quot;+string+str(counter)+&quot; -c 1&quot;)
+             os.system("ping "+string+str(counter)+" -c 1")
 
        counter+=1
 
@@ -112,7 +112,7 @@ These are stored in table and made static with the feature mentioned above .
 
     for i in range(len(data)):
 
-         if(data[i]==&quot;at&quot; and data[i+1]!=&quot;\&lt;incomplete\&gt;&quot; ):
+         if(data[i]=="at" and data[i+1]!="\&lt;incomplete\&gt;" ):
 
              map[data[i-1]]=data[i+1]
 
@@ -122,15 +122,15 @@ This process will reduce the task of manually adding static IP and corresponding
 
     def addvalues(map):
 
-    n=int(input(&quot;How many values do you want to add&quot;))
+    n=int(input("How many values do you want to add"))
 
     for i in range(n):
 
-         ip=input(&quot;Enter the value of ip&quot;)
+         ip=input("Enter the value of ip")
 
          ip=&#39;(&#39;+ip+&#39;)&#39;
 
-         mac=input(&quot;Enter the corresponding MAC address&quot;)
+         mac=input("Enter the corresponding MAC address")
 
          map[ip]=mac
 
@@ -155,7 +155,7 @@ The implementation for the first part is very straight forward , **we are checki
 
     for i in range(len(data)):
 
-         if(data[i]==&quot;at&quot; and data[i+1]!=&quot;\&lt;incomplete\&gt;&quot; ):
+         if(data[i]=="at" and data[i+1]!="\&lt;incomplete\&gt;" ):
 
              if data[i-1] in arr:
 
@@ -169,7 +169,7 @@ The implementation for the first part is very straight forward , **we are checki
 
 In the second case we will use the SCAPY library to detect MAC spoofing in case the first scan returns True .
 
-**This will compare the &quot;real&quot; MAC address to the &quot;BROADCASTED&quot; MAC address .**
+**This will compare the "real" MAC address to the "BROADCASTED" MAC address .**
 
 This can be run indefinitely to keep on comparing the real and spoofed mac address of every device .
 
@@ -185,7 +185,7 @@ This can be run indefinitely to keep on comparing the real and spoofed mac addre
 
                 if real != show:
 
-                    print(&quot;Attack has occurred&quot;)
+                    print("Attack has occurred")
 
 Real Time implementation will take a lot more functions for other tasks, but the major functions given above will remain the same .
 
@@ -232,19 +232,19 @@ This research was supported **by Bennett University** , Greater Noida. We thank 
 
 # **References**
 
-[1] D. Srinath, S. P. S.Panimalar, A. J. Simla, and J. D. J.Deepa, &quot;Detection
+[1] D. Srinath, S. P. S.Panimalar, A. J. Simla, and J. D. J.Deepa, "Detection
 
-and Prevention of ARP spoofing using Centralized Server,&quot; Int. J.
+and Prevention of ARP spoofing using Centralized Server," Int. J.
 
 Comput. Appl., vol. 113, no. 19, pp. 26–30, Mar. 2015.
 
-[2] J. Singh and V. Grewal, &quot;A Survey of Different Strategies to Pacify
+[2] J. Singh and V. Grewal, "A Survey of Different Strategies to Pacify
 
-ARP Poisoning Attacks in Wireless Networks,&quot; Int. J. Comput. Appl.,
+ARP Poisoning Attacks in Wireless Networks," Int. J. Comput. Appl.,
 
 vol. 116, no. 11, pp. 25–28, 2015.
 
-## [3] Mahendra Data &quot;[The Defense Against ARP Spoofing Attack Using Semi-Static ARP Cache Table](https://ieeexplore.ieee.org/document/8693155/)&quot;, in [2018 International Conference on Sustainable Information Engineering and Technology (SIET)](https://ieeexplore.ieee.org/xpl/conhome/8685076/proceeding)
+## [3] Mahendra Data "[The Defense Against ARP Spoofing Attack Using Semi-Static ARP Cache Table](https://ieeexplore.ieee.org/document/8693155/)", in [2018 International Conference on Sustainable Information Engineering and Technology (SIET)](https://ieeexplore.ieee.org/xpl/conhome/8685076/proceeding)
 
 ##
 
