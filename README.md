@@ -84,11 +84,11 @@ To approach this, we assume that the the time of creation of the table all devic
 
     value=[i for i in address.split(&#39;.&#39;)]
 
-    string=&quot;&quot;
+    string=""
 
     for i in range(len(value)-1):
 
-         string+=value[i]+&quot;.&quot;
+         string+=value[i]+"."
 
     while(counter\&lt;=255):
 
